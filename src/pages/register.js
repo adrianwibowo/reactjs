@@ -1,5 +1,6 @@
 import React from 'react'
 import '../assets/styles/register.scss'
+import axios from 'axios';
 
 //class base sama funsional base
 /**
@@ -69,4 +70,29 @@ const Welcome = () => {
     )
 }
 
-export default Welcome;
+const Login = () => {
+    let token
+    axios.post(`http://localhost:4000/api/v1/user/create`, {
+        "full_name": "aldi",
+        "user_name": "hayuk9",
+        "email": "user9@mail.com",
+        "password": "abc123456",
+        "role_id": "1"
+    })
+        .then(res => {
+            token = res.data.data.token
+            // console.log(res);
+            console.log( res.data.data.token);
+            // console.log(res.data);
+        }).catch(err => console.log(err.message))
+    return (
+        <div>
+            <h1>sukses</h1>
+            <p>{token}</p>
+        </div>
+
+    )
+}
+
+
+export { Welcome, Login };
