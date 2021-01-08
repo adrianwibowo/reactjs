@@ -14,6 +14,6 @@ const Button = ({text, variant, action}) => {
 Button.propTypes = {
     text: PropTypes.string.isRequired,
     variant: PropTypes.string.isRequired,
-    action: PropTypes.func.isRequired
+    action: PropTypes.func
 }
 export default Button

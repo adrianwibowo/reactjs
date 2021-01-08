@@ -1,6 +1,8 @@
 import React from 'react'
-import Button from '../components/Button'
+import Button from './Button'
 import '../styles/DeleteModal.css'
+import PropTypes from "prop-types"
+
 
 const DeleteModal = ({isDel, close, del}) => {
     if (isDel) {
@@ -18,7 +20,12 @@ const DeleteModal = ({isDel, close, del}) => {
     } else {
         return null
     }
+}
 
+DeleteModal.propTypes = {
+    text: PropTypes.string.isRequired,
+    variant: PropTypes.string.isRequired,
+    action: PropTypes.func
 }
 
 export default DeleteModal

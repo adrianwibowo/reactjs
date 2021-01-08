@@ -4,7 +4,7 @@ import ToDoItem from "./components/ToDoItem"
 import './App.css';
 import React from "react"
 import EditModal from './components/EditModal';
-import DeleteModal from './components/deleteModal';
+import DeleteModal from './components/DeleteModal';
 
 
 class App extends React.Component {

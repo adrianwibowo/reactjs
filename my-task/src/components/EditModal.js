@@ -25,7 +25,13 @@ class EditModal extends React.Component {
             return null
         }
     }
+}
 
+EditModal.propTypes = {
+    text: PropTypes.string.isRequired,
+    variant: PropTypes.string.isRequired,
+    action: PropTypes.func,
+    onChange: PropTypes.func
 }
 
 export default EditModal        

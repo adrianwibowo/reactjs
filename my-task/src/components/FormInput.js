@@ -35,6 +35,15 @@ class FormInput extends React.Component {
         )
     }
 }
+
+FormInput.propTypes = {
+    text: PropTypes.string.isRequired,
+    variant: PropTypes.string.isRequired,
+    action: PropTypes.func,
+    onChange: PropTypes.func,
+    value: PropTypes.string
+}
+
 export default FormInput
 const inputForm = {
     background: "#fff",
