@@ -15,7 +15,6 @@ const Routes = () => {
             <Route path='/contact' exact component={Contact} />
             <Route path="/detail/:id" exact component={Detail}/>
             <Route component={NotFound}/>
-
             </Switch>
         </React.Fragment>
     )
